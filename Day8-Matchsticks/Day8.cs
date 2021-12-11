@@ -9,14 +9,15 @@ while(!String.IsNullOrEmpty(s))
 {
     code_total += s.Length;
 
-    str_total += string_parser(s);
+    str_total += str_build(s);
 
     s = Console.ReadLine();
 }
 
 Console.WriteLine(code_total);
 Console.WriteLine(str_total);
-Console.WriteLine(code_total - str_total); 
+// Console.WriteLine(code_total - str_total); 
+Console.WriteLine(str_total - code_total);
 
 int string_parser(string str)
 {
@@ -47,3 +48,25 @@ int string_parser(string str)
 }
 
 // Part 1 solution: 1350
+
+int str_build(string str)
+{
+    int count = 0;
+
+    count += str.Count(c => c == '"');  // +1 for each " in string
+    count += str.Count(c => c == '\\');  // +1 for each \ in string
+    count += 2;  // +2 for new quotes
+    count += str.Length;   // total length of string
+
+    return count;
+}
+
+// Part 2 Solution: 2085
+
+/* Test string
+""
+"abc"
+"aaa\"aaa"
+"\x27"
+ 
+ */
