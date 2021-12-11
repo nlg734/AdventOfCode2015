@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day5-Doesn'tHeHaveIntern-El
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day6-ProbablyAFireHazard", "Day6-ProbablyAFireHazard\Day6-ProbablyAFireHazard.csproj", "{147A02AF-2F59-4B0A-9851-4060045E2A47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day7-SomeAssemblyRequired", "Day7-SomeAssemblyRequired\Day7-SomeAssemblyRequired.csproj", "{626E6741-73BA-4320-AE6B-93E1D83289BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day7-SomeAssemblyRequired", "Day7-SomeAssemblyRequired\Day7-SomeAssemblyRequired.csproj", "{626E6741-73BA-4320-AE6B-93E1D83289BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day8-Matchsticks", "Day8-Matchsticks\Day8-Matchsticks.csproj", "{6A0BBC29-E9D4-410F-9872-154E914AEA10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{626E6741-73BA-4320-AE6B-93E1D83289BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{626E6741-73BA-4320-AE6B-93E1D83289BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{626E6741-73BA-4320-AE6B-93E1D83289BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0BBC29-E9D4-410F-9872-154E914AEA10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0BBC29-E9D4-410F-9872-154E914AEA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0BBC29-E9D4-410F-9872-154E914AEA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0BBC29-E9D4-410F-9872-154E914AEA10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
