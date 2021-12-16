@@ -8,7 +8,7 @@ char current;
 char prev = input[0];
 int count = 1;
 
-for (int j = 0; j < 40; j++)
+for (int j = 0; j < 50; j++)
 {
     StringBuilder new_str = new StringBuilder();
     for (int i = 1; i < input.Length; i++)
@@ -36,3 +36,4 @@ for (int j = 0; j < 40; j++)
 Console.WriteLine(input.Length);
 
 // 146794 - too low - Part 1 Solution 252594
+// Part 2 - 3579328
