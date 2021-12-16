@@ -28,6 +28,11 @@ for (int j = 0; j < 40; j++)
 
     new_str.Append(count.ToString() + prev);
     input = new_str.ToString();
+    prev = input[0];
+    count = 1;
+    // Console.WriteLine(new_str.ToString() + "\t" + input);
 }
 
 Console.WriteLine(input.Length);
+
+// 146794 - too low - Part 1 Solution 252594
