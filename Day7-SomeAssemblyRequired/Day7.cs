@@ -1,4 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿/* Author: Natasha Graham
+ * Code for Advent of Code 2015, Day 7
+ * https://adventofcode.com/2015/day/7
+ * Dec 2021
+ * Updated: Jan 2022
+ */
+
 
 string? input = Console.ReadLine();
 var wires = new Dictionary<string, string>();  // wires and their equivalent expressions
@@ -42,7 +48,10 @@ foreach(string key in values.Keys)
 
 
 /// <summary>
-/// 
+/// Determines what kind of expression a key has and returns the resulting numerical value
+/// after evaluating the exprssion. 
+/// Returns existing value when it already exists in values. 
+/// When not a key in wires (as in, not a wire name), returns the integer value. 
 /// </summary>
 UInt16 GetValue(string key)
 {
@@ -89,27 +98,31 @@ UInt16 GetValue(string key)
     return values[key];
 }
 
-
+// Bitewise NOT
 UInt16 NOT(UInt16 x)
 {
     return (UInt16)~x;
 }
 
+// Bitwise AND
 UInt16 AND(UInt16 x, UInt16 y)
 {
     return (UInt16)(x & y);
 }
 
+// Bitwise OR
 UInt16 OR(UInt16 x, UInt16 y)
 {
     return (UInt16)(x | y);
 }
 
+// Bitwise Right Shift
 UInt16 RSHIFT(UInt16 x, UInt16 y)
 {
     return (UInt16)(x >> y);
 }
 
+// Bitwise Left Shift
 UInt16 LSHIFT(UInt16 x, UInt16 y)
 {
     return (UInt16)(x << y);

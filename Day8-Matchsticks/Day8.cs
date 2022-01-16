@@ -1,5 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/* Author: Natasha Graham
+ * Code for Advent of Code 2015, Day 8
+ * https://adventofcode.com/2015/day/8
+ * Dec 2021
+ * Updated: Jan 2022
+ */
+
 
 string? s = Console.ReadLine();
 int code_total = 0;
@@ -9,16 +14,22 @@ while(!String.IsNullOrEmpty(s))
 {
     code_total += s.Length;
 
-    str_total += str_build(s);
+    // str_total += string_parser(s);  // Part 1
+    str_total += str_build(s);  // Part 2
 
     s = Console.ReadLine();
 }
 
 Console.WriteLine(code_total);
 Console.WriteLine(str_total);
-// Console.WriteLine(code_total - str_total); 
-Console.WriteLine(str_total - code_total);
+// Console.WriteLine(code_total - str_total);  // Part 1
+Console.WriteLine(str_total - code_total);  // Part 2
 
+/// <summary>
+/// Parses string to determine number of characters in memory (as in, '\"' becomes one character,
+/// "\x27" becomes one character)
+/// Returns the number of characters
+/// </summary>
 int string_parser(string str)
 {
     int count = 0;
@@ -27,12 +38,14 @@ int string_parser(string str)
     {
         if(str[i] == '\\')
         {
+            // Determines if character is hex code for character, adds one to count
             if (str[i + 1] == 'x')
             {
                 count++;
                 i += 3;
                 continue;
             }
+            // If the character is a quote " or back slash \, add one to the count
             else if (str[i + 1] == '"' || str[i + 1] == '\\')
             {
                 count++;

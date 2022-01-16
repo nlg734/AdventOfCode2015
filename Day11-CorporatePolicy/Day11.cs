@@ -2,60 +2,71 @@
  * Code for Advent of Code 2015, Day 11
  * https://adventofcode.com/2015/day/11
  * Dec 2021
+ * Updated: Jan 2022
  */
 
-char[] password = Console.ReadLine().ToCharArray();
+// Take in string input, convert to character array
+char[] password = Console.ReadLine()!.ToCharArray();
 
-char[] pass = increment(password, password.Length - 1);
+Increment(password, password.Length - 1);
 
+
+// Loop through each iteration of a password until all three conditions are met
 while (true)
 {
-    if(pass[4] == 'f' && pass[5] == 'f')
+    // If the password contains i, o, or l, increment the password and restart loop
+    if(password.Contains('i') || password.Contains('o') || password.Contains('l'))
     {
-        
-    }
-
-    if(pass.Contains('i') || pass.Contains('o') || pass.Contains('l'))
-    {
-        pass = increment(pass, pass.Length - 1);
+        Increment(password, password.Length - 1);
         continue;
     }
 
-    if(!success(pass))
+    // If the conditions or HasSuccession() is not met, increment password and continue
+    if(!HasSuccession(password))
     {
-        pass = increment(pass, pass.Length - 1);
-        continue;
-    }
-    if(!repeat(pass))
-    {
-        pass = increment(pass, pass.Length - 1);
+        Increment(password, password.Length - 1);
         continue;
     }
 
-    Console.WriteLine(pass);
+    // If the conditions of Repeats() are not met, increment password and continue
+    if(!Repeats(password))
+    {
+        Increment(password, password.Length - 1);
+        continue;
+    }
 
+    // All conditions met, write new password, end loop
+    Console.WriteLine(password);
     break;
 }
 
-
-char[] increment(char[] pass, int index)
+/// <summary>
+/// Increments the password by 1. The last character is increased by 1, or rolled-over to 'a' when it is 'z' and the
+/// next letter is increased similarly. Recursive. 
+/// </summary>
+static void Increment(char[] pass, int index)
 {
     if(index < 0)
     {
-        return new char[0];
+        return;
     }
     if(pass[index] == 'z')
     {
         pass[index] = 'a';
-        return increment(pass, index - 1);
+        Increment(pass, index - 1);
+        return;
     }
 
     pass[index]++;
-    return pass;
+    return;
 }
 
 
-bool success(char[] pass)
+/// <summary>
+/// Checks if the password string contains a substring that is an increasing sequence of letters of at least length 3. 
+/// This is a substring such as "abc", "bcd", up to "xyz", anywhere in the string. 
+/// </summary>
+static bool HasSuccession(char[] pass)
 {
     for(int i = 0; i < pass.Length - 2; i++)
     {
@@ -69,16 +80,18 @@ bool success(char[] pass)
 }
 
 
-bool repeat(char[] pass)
+/// <summary>
+/// This looks for two sets of repeating letters. A password should have something like "aa" and "zz" anywhere
+/// in the string. The sets cannot overlap, as in "aaa" does not count as two sets of repeating letters. 
+/// </summary>
+static bool Repeats(char[] pass)
 {
-    int doubles = 0;
     List<char> c = new List<char>();
 
     for(int i=0; i < pass.Length-1; i++)
     {
         if(pass[i] == pass[i+1])
         {
-            doubles++;
             i++;
             if(!c.Contains(pass[i]))
                 c.Add(pass[i]);
@@ -94,3 +107,4 @@ bool repeat(char[] pass)
 
 // Part 1 Solution: hxbxxyzz
 
+// Part 2 Solution - just run the part 1 answer through again. hxcaabcc
