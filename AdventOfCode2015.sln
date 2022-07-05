@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day10-ElvesLookElvesSay", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day11-CorporatePolicy", "Day11-CorporatePolicy\Day11-CorporatePolicy.csproj", "{091FE6E8-069D-4984-980C-B630D9653E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day12-JSAbacusFramework_io", "Day12-JSAbacusFramework_io\Day12-JSAbacusFramework_io.csproj", "{67BA0B70-7B11-440D-AA54-8D323AC321BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day12-JSAbacusFramework_io", "Day12-JSAbacusFramework_io\Day12-JSAbacusFramework_io.csproj", "{67BA0B70-7B11-440D-AA54-8D323AC321BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day14-ReindeerOlympics", "Day14-ReindeerOlympics\Day14-ReindeerOlympics.csproj", "{546A4E00-246B-4491-A009-5B9856E0A5F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{67BA0B70-7B11-440D-AA54-8D323AC321BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67BA0B70-7B11-440D-AA54-8D323AC321BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67BA0B70-7B11-440D-AA54-8D323AC321BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{546A4E00-246B-4491-A009-5B9856E0A5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546A4E00-246B-4491-A009-5B9856E0A5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546A4E00-246B-4491-A009-5B9856E0A5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546A4E00-246B-4491-A009-5B9856E0A5F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
